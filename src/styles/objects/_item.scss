@@ -9,8 +9,8 @@ Item
 
 An individual documentation item
 
-.item--small-children           - Smaller than normal children
-.item--large-children           - Larger than normal children
+.item--fixed-child-width       - Doesn't allow the children to scale in width
+.item--fixed-child-height       - Doesn't allow the children to scale in height
 */
 
 .item {
@@ -34,7 +34,7 @@ An individual documentation item
     width: 20rem;
     position: absolute;
     left: 6.8rem;
-    top: 2.1rem;
+    top: 2.2rem;
   }
 
   .item__container {
@@ -46,8 +46,8 @@ An individual documentation item
 
     .item__child {
       $item-child-color: color(child);
-      width: 0.6rem;
-      height: 0.6rem;
+      min-width: 0.6rem;
+      min-height: 0.6rem;
       display: block;
       border: 1px solid color(black);
 
@@ -60,27 +60,25 @@ An individual documentation item
 
 
 //---------------------------------------------------------------
-// Modifier: small children
+// Modifier: fixed child width
 //---------------------------------------------------------------
 
-.item--small-children {
+.item--fixed-child-width {
 
   .item__child {
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 0.6rem;
   }
 }
 
 
 //---------------------------------------------------------------
-// Modifier: large children
+// Modifier: fixed child height
 //---------------------------------------------------------------
 
-.item--large-children {
+.item--fixed-child-height {
 
   .item__child {
-    width: 2.7rem;
-    height: 2.7rem;
+    height: 0.6rem;
   }
 }
 
@@ -225,5 +223,238 @@ An individual documentation item
   .item__container {
     display: flex;
     justify-content: space-around;
+  }
+}
+
+
+//---------------------------------------------------------------
+// Modifier: align-items
+//---------------------------------------------------------------
+
+// flex-start
+.item--container-align-items-flex-start {
+  
+  .item__container {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+// flex-end
+.item--container-align-items-flex-end {
+  
+  .item__container {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+// center
+.item--container-align-items-center {
+  
+  .item__container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+// baseline
+.item--container-align-items-baseline {
+  
+  .item__container {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+// stretch
+.item--container-align-items-stretch {
+  
+  .item__container {
+    display: flex;
+    align-items: stretch;
+  }
+}
+
+
+//---------------------------------------------------------------
+// Modifier: align-content
+//---------------------------------------------------------------
+
+// flex-start
+.item--container-align-content-flex-start {
+  
+  .item__container {
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+// flex-end
+.item--container-align-content-flex-end {
+  
+  .item__container {
+    display: flex;
+    align-content: flex-end;
+    flex-wrap: wrap;
+  }
+}
+
+// center
+.item--container-align-content-center {
+  
+  .item__container {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+// space-between
+.item--container-align-content-space-between {
+  
+  .item__container {
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+// space-around
+.item--container-align-content-space-around {
+  
+  .item__container {
+    display: flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+
+// stretch
+.item--container-align-content-stretch {
+  
+  .item__container {
+    display: flex;
+    align-content: stretch;
+    flex-wrap: wrap;
+  }
+}
+
+
+//---------------------------------------------------------------
+// Modifier: order
+//---------------------------------------------------------------
+
+// order
+.item--container-order {
+  
+  .item__container {
+    display: flex;
+  }
+  
+  .item__child:nth-child(1) {
+    order: 50;
+  }
+  
+  .item__child:nth-child(2) {
+    order: 100;
+  }
+}
+
+
+//---------------------------------------------------------------
+// Modifier: flex-grow
+//---------------------------------------------------------------
+
+// flex-grow (all 1)
+.item--container-flex-grow-all-1 {
+  
+  .item__container {
+    display: flex;
+  }
+  
+  .item__child {
+    flex-grow: 1;
+  }
+}
+
+// flex-grow (each unique)
+.item--container-flex-grow-all-unique {
+  
+  .item__container {
+    display: flex;
+  }
+  
+  .item__child:nth-child(1) {
+    flex-grow: 1;
+  }
+  
+  .item__child:nth-child(2) {
+    flex-grow: 2;
+  }
+  
+  .item__child:nth-child(3) {
+    flex-grow: 3;
+  }
+}
+
+
+//---------------------------------------------------------------
+// Modifier: flex-basis
+//---------------------------------------------------------------
+
+// flex-basis (20/30)
+.item--container-flex-basis-20-40 {
+  
+  .item__container {
+    display: flex;
+  }
+  
+  .item__child:nth-child(1) {
+    flex-basis: 20%;
+  }
+  
+  .item__child:nth-child(2) {
+    flex-basis: 40%;
+  }
+}
+
+
+//---------------------------------------------------------------
+// Modifier: flex-shrink
+//---------------------------------------------------------------
+
+// flex-shrink (all 1)
+.item--container-flex-shrink-unique {
+  
+  .item__container {
+    display: flex;
+  }
+  
+  .item__child {
+    flex-basis: 100%;
+  }
+  
+  .item__child:nth-child(2) {
+    flex-shrink: 2;
+  }
+}
+
+
+//---------------------------------------------------------------
+// Modifier: align-self
+//---------------------------------------------------------------
+
+// align-self
+.item--container-align-self-unique {
+  
+  .item__container {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .item__child:nth-child(3) {
+    align-self: flex-end;
   }
 }

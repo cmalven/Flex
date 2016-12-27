@@ -10,6 +10,7 @@
   {# container: display #}
   <section class="set">
     <h2 class="set__heading">display</h2>
+    <p class="set__notes">Enables flex for all children.</p>
     <div class="set__items">
       {% include '_partials/item.twig' with {
         classes: 'item--container-display-flex',
@@ -25,6 +26,7 @@
   {# container: flex-direction #}
   <section class="set">
     <h2 class="set__heading">flex-direction</h2>
+    <p class="set__notes">Establishes the main axis.</p>
     <div class="set__items">
       {% include '_partials/item.twig' with {
         classes: 'item--container-flex-direction-row',
@@ -48,11 +50,12 @@
   {# container: flex-wrap #}
   <section class="set">
     <h2 class="set__heading">flex-wrap</h2>
+    <p class="set__notes">Wraps items if they can't all be made to fit on one line.</p>
     <div class="set__items">
       {% include '_partials/item.twig' with {
         classes: 'item--container-flex-wrap-nowrap',
         heading: 'flex-wrap: nowrap',
-        numChildren: 10
+        numChildren: 6
       } %}
       {% include '_partials/item.twig' with {
         classes: 'item--container-flex-wrap-wrap',
@@ -70,6 +73,7 @@
   {# container: justify-content #}
   <section class="set">
     <h2 class="set__heading">justify-content</h2>
+    <p class="set__notes">Attempts to distribute extra space on the main axis.</p>
     <div class="set__items">
       {% include '_partials/item.twig' with {
         classes: 'item--container-justify-content-flex-start',
@@ -95,6 +99,150 @@
         classes: 'item--container-justify-content-space-around',
         heading: 'justify-content: space-around',
         numChildren: 3
+      } %}
+    </div>
+  </section>
+  
+  {# container: align-items #}
+  <section class="set">
+    <h2 class="set__heading">align-items</h2>
+    <p class="set__notes">Determines how items are laid out on the cross axis.</p>
+    <div class="set__items">
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-align-items-flex-start',
+        heading: 'align-items: flex-start',
+        numChildren: 6
+      } %}
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-align-items-flex-end',
+        heading: 'align-items: flex-end',
+        numChildren: 6
+      } %}
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-align-items-center',
+        heading: 'align-items: center',
+        numChildren: 6
+      } %}
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-align-items-baseline',
+        heading: 'align-items: baseline',
+        numChildren: 6
+      } %}
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-align-items-stretch',
+        heading: 'align-items: stretch',
+        numChildren: 6
+      } %}
+    </div>
+  </section>
+  
+  {# container: align-content #}
+  <section class="set">
+    <h2 class="set__heading">align-content</h2>
+    <p class="set__notes">Only has an effect with more than one line of content. Examples shown here use flex-wrap.</p>
+    <div class="set__items">
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-align-content-flex-start',
+        heading: 'align-content: flex-start',
+        numChildren: 10
+      } %}
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-align-content-flex-end',
+        heading: 'align-content: flex-end',
+        numChildren: 10
+      } %}
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-align-content-center',
+        heading: 'align-content: center',
+        numChildren: 10
+      } %}
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-align-content-space-between',
+        heading: 'align-content: space-between',
+        numChildren: 10
+      } %}
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-align-content-space-around',
+        heading: 'align-content: space-around',
+        numChildren: 10
+      } %}
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-align-content-stretch',
+        heading: 'align-content: stretch',
+        numChildren: 10
+      } %}
+    </div>
+  </section>
+
+  <div class="subhead">children</div>
+  
+  {# child: order #}
+  <section class="set">
+    <h2 class="set__heading">order</h2>
+    <p class="set__notes">Allows you to explictly set the order you want each child to appear in.</p>
+    <div class="set__items">
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-order',
+        heading: 'order: integer'
+      } %}
+    </div>
+  </section>
+  
+  {# child: flex-grow #}
+  <section class="set">
+    <h2 class="set__heading">flex-grow</h2>
+    <p class="set__notes">Allows you to determine how each child is allowed to grow as a part of a whole.</p>
+    <div class="set__items">
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-flex-grow-all-1',
+        heading: 'flex-grow: 1 (applied to all)',
+        numChildren: 3
+      } %}
+    </div>
+    <div class="set__items">
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-flex-grow-all-unique',
+        heading: 'flex-grow (1, 2, and 3)',
+        numChildren: 3
+      } %}
+    </div>
+  </section>
+  
+  {# child: flex-basis #}
+  <section class="set">
+    <h2 class="set__heading">flex-basis</h2>
+    <p class="set__notes">Defines the size of an element before remaining space is distributed.</p>
+    <div class="set__items">
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-flex-basis-20-40',
+        heading: 'first item 20%, second item 40%',
+        numChildren: 2
+      } %}
+    </div>
+  </section>
+  
+  {# child: flex-shrink #}
+  <section class="set">
+    <h2 class="set__heading">flex-shrink</h2>
+    <p class="set__notes">Allows an item to shrink if necessary. Only really useful with a set size or flex-basis.</p>
+    <div class="set__items">
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-flex-shrink-unique',
+        heading: 'both want to be 100% wide, 2nd item has flex-shrink: 2',
+        numChildren: 2
+      } %}
+    </div>
+  </section>
+  
+  {# child: align-self #}
+  <section class="set">
+    <h2 class="set__heading">align-self</h2>
+    <p class="set__notes">Sets alignment for individual item. See "align-items" for options</p>
+    <div class="set__items">
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-align-self-unique',
+        heading: '3rd item has align-self:flex-end',
+        numChildren: 6
       } %}
     </div>
   </section>
