@@ -182,7 +182,7 @@
     <p class="set__notes">Allows you to explictly set the order you want each child to appear in.</p>
     <div class="set__items">
       {% include '_partials/item.twig' with {
-        classes: 'item--container-order',
+        classes: 'item--alt-child-colors-1 item--container-order',
         heading: 'order: integer'
       } %}
     </div>
@@ -194,14 +194,14 @@
     <p class="set__notes">Allows you to determine how each child is allowed to grow as a part of a whole.</p>
     <div class="set__items">
       {% include '_partials/item.twig' with {
-        classes: 'item--container-flex-grow-all-1',
+        classes: 'item--alt-child-colors-1 item--container-flex-grow-all-1',
         heading: 'flex-grow: 1 (applied to all)',
         numChildren: 3
       } %}
     </div>
     <div class="set__items">
       {% include '_partials/item.twig' with {
-        classes: 'item--container-flex-grow-all-unique',
+        classes: 'item--alt-child-colors-1 item--container-flex-grow-all-unique',
         heading: 'flex-grow (1, 2, and 3)',
         numChildren: 3
       } %}
@@ -214,7 +214,7 @@
     <p class="set__notes">Defines the size of an element before remaining space is distributed.</p>
     <div class="set__items">
       {% include '_partials/item.twig' with {
-        classes: 'item--container-flex-basis-20-40',
+        classes: 'item--alt-child-colors-1 item--container-flex-basis-20-40',
         heading: 'first item 20%, second item 40%',
         numChildren: 2
       } %}
@@ -227,7 +227,7 @@
     <p class="set__notes">Allows an item to shrink if necessary. Only really useful with a set size or flex-basis.</p>
     <div class="set__items">
       {% include '_partials/item.twig' with {
-        classes: 'item--container-flex-shrink-unique',
+        classes: 'item--alt-child-colors-1 item--container-flex-shrink-unique',
         heading: 'both want to be 100% wide, 2nd item has flex-shrink: 2',
         numChildren: 2
       } %}
@@ -240,7 +240,7 @@
     <p class="set__notes">Sets alignment for individual item. See "align-items" for options</p>
     <div class="set__items">
       {% include '_partials/item.twig' with {
-        classes: 'item--container-align-self-unique',
+        classes: 'item--alt-child-colors-1 item--container-align-self-unique',
         heading: '3rd item has align-self:flex-end',
         numChildren: 6
       } %}

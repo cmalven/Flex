@@ -13,6 +13,15 @@ An individual documentation item
 .item--fixed-child-height       - Doesn't allow the children to scale in height
 */
 
+@mixin child-colors($color) {
+  @for $idx from 1 through 10 {
+    &:nth-child(#{$idx}) {
+      background-color: rgba($color, 1 - $idx * 0.07);
+    }
+  }
+}
+
+
 .item {
   display: inline-block;
   width: 27rem;
@@ -45,17 +54,11 @@ An individual documentation item
   }
 
     .item__child {
-      $item-child-color: color(child);
+      @include child-colors(color(child));
       min-width: 0.6rem;
       min-height: 0.6rem;
       display: block;
       border: 1px solid color(black);
-
-      @for $idx from 1 through 10 {
-        &:nth-child(#{$idx}) {
-          background-color: rgba($item-child-color, 1 - $idx * 0.07);
-        }
-      }
     }
 
 
@@ -79,6 +82,18 @@ An individual documentation item
 
   .item__child {
     height: 0.6rem;
+  }
+}
+
+
+//---------------------------------------------------------------
+// Modifier: alt child colors 1
+//---------------------------------------------------------------
+
+.item--alt-child-colors-1 {
+
+  .item__child {
+    @include child-colors(color(child-alt));
   }
 }
 
