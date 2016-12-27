@@ -15,26 +15,39 @@ An individual documentation item
 
 .item {
   display: inline-block;
-  width: 12rem;
+  width: 27rem;
+  position: relative;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  padding: 0.8rem;
+  left: -0.8rem;
+
+  &:hover {
+    background-color: rgba(color(white), 0.06);
+  }
 }
 
   .item__heading {
     @include type-style(base-code);
     height: 2rem;
+    display: inline-block;
+    width: 20rem;
+    position: absolute;
+    left: 6.8rem;
+    top: 2.1rem;
   }
 
   .item__container {
-    @include spacing(s);
-    width: 11.6rem;
-    height: 11.6rem;
+    width: 4.6rem;
+    height: 4.6rem;
     padding: 0.4rem;
     border: 1px solid rgba(color(white), 0.2);
   }
 
     .item__child {
-      $item-child-color: color(red);
-      width: 1.8rem;
-      height: 1.8rem;
+      $item-child-color: color(child);
+      width: 0.6rem;
+      height: 0.6rem;
       display: block;
       border: 1px solid color(black);
 

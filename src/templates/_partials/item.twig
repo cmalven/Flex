@@ -14,11 +14,11 @@
 {% set numChildren = numChildren is defined ? numChildren : 6 %}
 
 <div class="item {{ classes }}">
-  <h3 class="item__heading">{{ heading }}</h3>
-
   <div class="item__container">
     {% for idx in 1..numChildren %}
       <span class="item__child"></span>
     {% endfor %}
   </div>
+  
+  <h3 class="item__heading">{{ heading }}</h3>
 </div>

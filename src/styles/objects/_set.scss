@@ -15,15 +15,11 @@ A group of documentation items
 }
 
   .set__heading {
-    @include type-style(section-heading);
-
-    > span {
-      @include type-style(section-heading-code);
-    }
+    @include type-style(section-heading-code);
   }
 
   .set__items {
-    @include spacing(xs);
+    @include spacing(s);
 
     > .item {
       margin-right: 1.5rem;
