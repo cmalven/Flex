@@ -1,0 +1,32 @@
+
+//===============================================================
+// Set
+//===============================================================
+
+
+/*
+Set
+
+A group of documentation items
+*/
+
+.set {
+
+}
+
+  .set__heading {
+    @include type-style(section-heading);
+
+    > span {
+      @include type-style(section-heading-code);
+    }
+  }
+
+  .set__items {
+    @include spacing(xs);
+
+    > .item {
+      margin-right: 1.5rem;
+      vertical-align: top;
+    }
+  }

@@ -1,0 +1,216 @@
+
+//===============================================================
+// Item
+//===============================================================
+
+
+/*
+Item
+
+An individual documentation item
+
+.item--small-children           - Smaller than normal children
+.item--large-children           - Larger than normal children
+*/
+
+.item {
+  display: inline-block;
+  width: 12rem;
+}
+
+  .item__heading {
+    @include type-style(base-code);
+    height: 2rem;
+  }
+
+  .item__container {
+    @include spacing(s);
+    width: 11.6rem;
+    height: 11.6rem;
+    padding: 0.4rem;
+    border: 1px solid rgba(color(white), 0.2);
+  }
+
+    .item__child {
+      $item-child-color: color(red);
+      width: 1.8rem;
+      height: 1.8rem;
+      display: block;
+      border: 1px solid color(black);
+
+      @for $idx from 1 through 10 {
+        &:nth-child(#{$idx}) {
+          background-color: rgba($item-child-color, 1 - $idx * 0.07);
+        }
+      }
+    }
+
+
+//---------------------------------------------------------------
+// Modifier: small children
+//---------------------------------------------------------------
+
+.item--small-children {
+
+  .item__child {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}
+
+
+//---------------------------------------------------------------
+// Modifier: large children
+//---------------------------------------------------------------
+
+.item--large-children {
+
+  .item__child {
+    width: 2.7rem;
+    height: 2.7rem;
+  }
+}
+
+
+//---------------------------------------------------------------
+// Modifier: display
+//---------------------------------------------------------------
+
+// flex
+.item--container-display-flex {
+
+  .item__container {
+    display: flex;
+  }
+}
+
+// inline-flex
+.item--container-display-inline-flex {
+
+  .item__container {
+    display: inline-flex;
+  }
+}
+
+
+//---------------------------------------------------------------
+// Modifier: flex-direction
+//---------------------------------------------------------------
+
+// row
+.item--container-flex-direction-row {
+
+  .item__container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+// row-reverse
+.item--container-flex-direction-row-reverse {
+
+  .item__container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+// column
+.item--container-flex-direction-column {
+
+  .item__container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+// column-reverse
+.item--container-flex-direction-column-reverse {
+
+  .item__container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+
+//---------------------------------------------------------------
+// Modifier: flex-wrap
+//---------------------------------------------------------------
+
+// nowrap
+.item--container-flex-wrap-nowrap {
+
+  .item__container {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+// wrap
+.item--container-flex-wrap-wrap {
+
+  .item__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+// wrap-reverse
+.item--container-flex-wrap-wrap-reverse {
+
+  .item__container {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+}
+
+
+//---------------------------------------------------------------
+// Modifier: justify-content
+//---------------------------------------------------------------
+
+// flex-start
+.item--container-justify-content-flex-start {
+  
+  .item__container {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+// flex-end
+.item--container-justify-content-flex-end {
+  
+  .item__container {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+// center
+.item--container-justify-content-center {
+  
+  .item__container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+// space-between
+.item--container-justify-content-space-between {
+  
+  .item__container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+// space-around
+.item--container-justify-content-space-around {
+  
+  .item__container {
+    display: flex;
+    justify-content: space-around;
+  }
+}

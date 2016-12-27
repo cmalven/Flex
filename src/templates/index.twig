@@ -1,0 +1,99 @@
+{% extends "layout.twig" %}
+
+{% block main %}
+  <header class="l-header">
+    <h1>Flexbox.Works</h1>
+  </header>
+  
+  {# container: display #}
+  <section class="set">
+    <h2 class="set__heading">container: <span>display</span></h2>
+    <div class="set__items">
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-display-flex',
+        heading: 'display: flex'
+      } %}
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-display-inline-flex',
+        heading: 'display: inline-flex'
+      } %}
+    </div>
+  </section>
+  
+  {# container: flex-direction #}
+  <section class="set">
+    <h2 class="set__heading">container: <span>flex-direction</span></h2>
+    <div class="set__items">
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-flex-direction-row',
+        heading: 'flex-direction: row'
+      } %}
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-flex-direction-row-reverse',
+        heading: 'flex-direction: row-reverse'
+      } %}
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-flex-direction-column',
+        heading: 'flex-direction: column'
+      } %}
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-flex-direction-column-reverse',
+        heading: 'flex-direction: column-reverse'
+      } %}
+    </div>
+  </section>
+  
+  {# container: flex-wrap #}
+  <section class="set">
+    <h2 class="set__heading">container: <span>flex-wrap</span></h2>
+    <div class="set__items">
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-flex-wrap-nowrap',
+        heading: 'flex-wrap: nowrap',
+        numChildren: 10
+      } %}
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-flex-wrap-wrap',
+        heading: 'flex-wrap: wrap',
+        numChildren: 10
+      } %}
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-flex-wrap-wrap-reverse',
+        heading: 'flex-wrap: wrap-reverse',
+        numChildren: 10
+      } %}
+    </div>
+  </section>
+  
+  {# container: justify-content #}
+  <section class="set">
+    <h2 class="set__heading">container: <span>justify-content</span></h2>
+    <div class="set__items">
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-justify-content-flex-start',
+        heading: 'justify-content: flex-start',
+        numChildren: 3
+      } %}
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-justify-content-flex-end',
+        heading: 'justify-content: flex-end',
+        numChildren: 3
+      } %}
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-justify-content-center',
+        heading: 'justify-content: center',
+        numChildren: 3
+      } %}
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-justify-content-space-between',
+        heading: 'justify-content: space-between',
+        numChildren: 3
+      } %}
+      {% include '_partials/item.twig' with {
+        classes: 'item--container-justify-content-space-around',
+        heading: 'justify-content: space-around',
+        numChildren: 3
+      } %}
+    </div>
+  </section>
+{% endblock %}

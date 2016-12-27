@@ -1,0 +1,19 @@
+
+//===============================================================
+// Layout - Container
+//===============================================================
+
+
+/*
+Layout - Container
+
+The wrapper for the entire site
+*/
+
+.l-container {
+  padding: 5rem;
+
+  > .set {
+    @include spacing(m);
+  }
+}
