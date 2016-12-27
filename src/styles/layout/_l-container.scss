@@ -13,8 +13,12 @@ The wrapper for the entire site
 .l-container {
   padding: 5rem;
 
+  > .subhead {
+    @include spacing(l);
+  }
+
   > .set {
-    @include spacing(m);
+    @include spacing(l);
     display: inline-block;
     width: 25%;
     min-width: 27rem;
