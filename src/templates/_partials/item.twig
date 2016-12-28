@@ -13,12 +13,12 @@
 
 {% set numChildren = numChildren is defined ? numChildren : 6 %}
 
-<div class="item {{ classes }}">
+<div class="item {{ classes }} js-item" data-code="{{ code ? code }}">
   <div class="item__container">
     {% for idx in 1..numChildren %}
       <span class="item__child"></span>
     {% endfor %}
   </div>
   
-  <h3 class="item__heading">{{ heading }}</h3>
+  <h3 class="item__heading js-item-heading">{{ heading }}</h3>
 </div>

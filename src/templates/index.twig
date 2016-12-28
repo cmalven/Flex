@@ -33,11 +33,13 @@
     <div class="set__items">
       {% include '_partials/item.twig' with {
         classes: 'item--container-display-flex',
-        heading: 'display: flex'
+        heading: 'display: flex',
+        code: 'display: flex;'
       } %}
       {% include '_partials/item.twig' with {
         classes: 'item--container-display-inline-flex',
-        heading: 'display: inline-flex'
+        heading: 'display: inline-flex',
+        code: 'display: inline-flex;'
       } %}
     </div>
   </section>
@@ -49,19 +51,23 @@
     <div class="set__items">
       {% include '_partials/item.twig' with {
         classes: 'item--container-flex-direction-row',
-        heading: 'flex-direction: row'
+        heading: 'flex-direction: row',
+        code: 'flex-direction: row;'
       } %}
       {% include '_partials/item.twig' with {
         classes: 'item--container-flex-direction-row-reverse',
-        heading: 'flex-direction: row-reverse'
+        heading: 'flex-direction: row-reverse',
+        code: 'flex-direction: row-reverse;'
       } %}
       {% include '_partials/item.twig' with {
         classes: 'item--container-flex-direction-column',
-        heading: 'flex-direction: column'
+        heading: 'flex-direction: column',
+        code: 'flex-direction: column;'
       } %}
       {% include '_partials/item.twig' with {
         classes: 'item--container-flex-direction-column-reverse',
-        heading: 'flex-direction: column-reverse'
+        heading: 'flex-direction: column-reverse',
+        code: 'flex-direction: column-reverse;'
       } %}
     </div>
   </section>
@@ -74,17 +80,20 @@
       {% include '_partials/item.twig' with {
         classes: 'item--container-flex-wrap-nowrap',
         heading: 'flex-wrap: nowrap',
-        numChildren: 6
+        numChildren: 6,
+        code: 'flex-wrap: nowrap;'
       } %}
       {% include '_partials/item.twig' with {
         classes: 'item--container-flex-wrap-wrap',
         heading: 'flex-wrap: wrap',
-        numChildren: 10
+        numChildren: 10,
+        code: 'flex-wrap: wrap;'
       } %}
       {% include '_partials/item.twig' with {
         classes: 'item--container-flex-wrap-wrap-reverse',
         heading: 'flex-wrap: wrap-reverse',
-        numChildren: 10
+        numChildren: 10,
+        code: 'flex-wrap: wrap-reverse;'
       } %}
     </div>
   </section>
@@ -97,27 +106,32 @@
       {% include '_partials/item.twig' with {
         classes: 'item--container-justify-content-flex-start',
         heading: 'justify-content: flex-start',
-        numChildren: 3
+        numChildren: 3,
+        code: 'justify-content: flex-start;'
       } %}
       {% include '_partials/item.twig' with {
         classes: 'item--container-justify-content-flex-end',
         heading: 'justify-content: flex-end',
-        numChildren: 3
+        numChildren: 3,
+        code: 'justify-content: flex-end;'
       } %}
       {% include '_partials/item.twig' with {
         classes: 'item--container-justify-content-center',
         heading: 'justify-content: center',
-        numChildren: 3
+        numChildren: 3,
+        code: 'justify-content: center;'
       } %}
       {% include '_partials/item.twig' with {
         classes: 'item--container-justify-content-space-between',
         heading: 'justify-content: space-between',
-        numChildren: 3
+        numChildren: 3,
+        code: 'justify-content: space-between;'
       } %}
       {% include '_partials/item.twig' with {
         classes: 'item--container-justify-content-space-around',
         heading: 'justify-content: space-around',
-        numChildren: 3
+        numChildren: 3,
+        code: 'justify-content: space-around;'
       } %}
     </div>
   </section>
@@ -130,27 +144,32 @@
       {% include '_partials/item.twig' with {
         classes: 'item--container-align-items-flex-start',
         heading: 'align-items: flex-start',
-        numChildren: 6
+        numChildren: 6,
+        code: 'align-items: flex-start;'
       } %}
       {% include '_partials/item.twig' with {
         classes: 'item--container-align-items-flex-end',
         heading: 'align-items: flex-end',
-        numChildren: 6
+        numChildren: 6,
+        code: 'align-items: flex-end;'
       } %}
       {% include '_partials/item.twig' with {
         classes: 'item--container-align-items-center',
         heading: 'align-items: center',
-        numChildren: 6
+        numChildren: 6,
+        code: 'align-items: center;'
       } %}
       {% include '_partials/item.twig' with {
         classes: 'item--container-align-items-baseline',
         heading: 'align-items: baseline',
-        numChildren: 6
+        numChildren: 6,
+        code: 'align-items: baseline;'
       } %}
       {% include '_partials/item.twig' with {
         classes: 'item--container-align-items-stretch',
         heading: 'align-items: stretch',
-        numChildren: 6
+        numChildren: 6,
+        code: 'align-items: stretch;'
       } %}
     </div>
   </section>
@@ -163,32 +182,38 @@
       {% include '_partials/item.twig' with {
         classes: 'item--container-align-content-flex-start',
         heading: 'align-content: flex-start',
-        numChildren: 10
+        numChildren: 10,
+        code: 'align-content: flex-start;'
       } %}
       {% include '_partials/item.twig' with {
         classes: 'item--container-align-content-flex-end',
         heading: 'align-content: flex-end',
-        numChildren: 10
+        numChildren: 10,
+        code: 'align-content: flex-end;'
       } %}
       {% include '_partials/item.twig' with {
         classes: 'item--container-align-content-center',
         heading: 'align-content: center',
-        numChildren: 10
+        numChildren: 10,
+        code: 'align-content: center;'
       } %}
       {% include '_partials/item.twig' with {
         classes: 'item--container-align-content-space-between',
         heading: 'align-content: space-between',
-        numChildren: 10
+        numChildren: 10,
+        code: 'align-content: space-between;'
       } %}
       {% include '_partials/item.twig' with {
         classes: 'item--container-align-content-space-around',
         heading: 'align-content: space-around',
-        numChildren: 10
+        numChildren: 10,
+        code: 'align-content: space-around;'
       } %}
       {% include '_partials/item.twig' with {
         classes: 'item--container-align-content-stretch',
         heading: 'align-content: stretch',
-        numChildren: 10
+        numChildren: 10,
+        code: 'align-content: stretch;'
       } %}
     </div>
   </section>
@@ -202,7 +227,8 @@
     <div class="set__items">
       {% include '_partials/item.twig' with {
         classes: 'item--alt-child-colors-1 item--container-order',
-        heading: 'order: integer'
+        heading: 'order: integer',
+        code: 'order: 1;'
       } %}
     </div>
   </section>
@@ -215,14 +241,16 @@
       {% include '_partials/item.twig' with {
         classes: 'item--alt-child-colors-1 item--container-flex-grow-all-1',
         heading: 'flex-grow: 1 (applied to all)',
-        numChildren: 3
+        numChildren: 3,
+        code: 'flex-grow: 1;'
       } %}
     </div>
     <div class="set__items">
       {% include '_partials/item.twig' with {
         classes: 'item--alt-child-colors-1 item--container-flex-grow-all-unique',
         heading: 'flex-grow (1, 2, and 3)',
-        numChildren: 3
+        numChildren: 3,
+        code: 'flex-grow: 1;'
       } %}
     </div>
   </section>
@@ -235,7 +263,8 @@
       {% include '_partials/item.twig' with {
         classes: 'item--alt-child-colors-1 item--container-flex-basis-20-40',
         heading: 'first item 20%, second item 40%',
-        numChildren: 2
+        numChildren: 2,
+        code: 'flex-basis: 50%;'
       } %}
     </div>
   </section>
@@ -248,7 +277,8 @@
       {% include '_partials/item.twig' with {
         classes: 'item--alt-child-colors-1 item--container-flex-shrink-unique',
         heading: 'both want to be 100% wide, 2nd item has flex-shrink: 2',
-        numChildren: 2
+        numChildren: 2,
+        code: 'flex-shrink: 1;'
       } %}
     </div>
   </section>
@@ -261,7 +291,8 @@
       {% include '_partials/item.twig' with {
         classes: 'item--alt-child-colors-1 item--container-align-self-unique',
         heading: '3rd item has align-self:flex-end',
-        numChildren: 6
+        numChildren: 6,
+        code: 'align-self: flex-start|flex-end|center|baseline|stretch;'
       } %}
     </div>
   </section>
