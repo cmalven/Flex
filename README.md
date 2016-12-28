@@ -1,6 +1,6 @@
 # Flexbox
 
-Cheatsheet for Flexbox
+A minimal visual cheatsheet for flexbox.
 
 ## Setup
 

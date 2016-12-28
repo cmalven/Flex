@@ -1,10 +1,11 @@
 {
-  "name": "malven-co-2016",
-  "title": "Malven 2016",
+  "name": "flex",
+  "title": "Flex",
+  "description": "A minimal visual cheatsheet for flexbox",
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cmalven/malven-co-2016"
+    "url": "https://github.com/cmalven/flex"
   },
   "author": {
     "name": "Chris Malven",
