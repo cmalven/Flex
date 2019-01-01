@@ -245,6 +245,15 @@ An individual documentation item
   }
 }
 
+// space-evenly
+.item--container-justify-content-space-evenly {
+  
+  .item__container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
 
 //---------------------------------------------------------------
 // Modifier: align-items
