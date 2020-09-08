@@ -19,4 +19,4 @@ You can access the site at [http://localhost:3000](http://localhost:3000)
 
 ## Deployment
 
-`yarn deploy`
+The site is deployed to Netlify automatically any time a change to `master` is detected.

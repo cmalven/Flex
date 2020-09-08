@@ -58,7 +58,6 @@
   },
   "scripts": {
     "start": "gulp",
-    "build": "gulp build",
-    "deploy": "NODE_ENV=production yarn build && surge . flexbox.malven.co"
+    "build": "gulp build"
   }
 }
