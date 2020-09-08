@@ -1,17 +1,19 @@
 # Flexbox
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9a2a1a4c-3363-4cec-9bce-bb8feb924001/deploy-status)](https://app.netlify.com/sites/flex-cheatsheet/deploys)
+
 A minimal visual cheatsheet for flexbox.
 
 ## Setup
 
 ### Front End Dependencies
 
-Before you run this site locally, make sure you have [NodeJS](http://nodejs.org) and [Yarn](https://yarnpkg.com/en/docs/install) installed.
+Before you run this site locally, make sure you have [NodeJS](http://nodejs.org) installed.
 
 Then:
 
-* `yarn` 
-* `yarn start`
+* `npm i` 
+* `npm start`
 
 ### Development Server
 
