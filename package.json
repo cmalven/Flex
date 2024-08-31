@@ -45,7 +45,7 @@
     "run-sequence": "^1.2.2",
     "script-loader": "^0.7.0",
     "surge": "^0.20.1",
-    "webpack": "^1.13.3"
+    "webpack": "^5.94.0"
   },
   "dependencies": {
     "clipboard": "^1.5.16",
